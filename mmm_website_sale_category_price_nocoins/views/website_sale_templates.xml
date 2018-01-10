@@ -1,0 +1,18 @@
+<openerp>
+    <data>
+        <!--<template id="products_item" inherit_id="website_sale.products_item" name="Products item no  display coins">-->
+         <template id="products_item" inherit_id="website_sale.products_item" name="MMM Products no coins for clients">
+
+            <!--<xpath expr="//div[@class='product_price']//span//span[@class='oe_currency_value']" position="replace">-->
+            <!--&lt;!&ndash;<xpath expr="//span//span[@class='oe_currency_value']" position="replace"/>&ndash;&gt;-->
+
+            <!--</xpath>-->
+
+
+            <!--<xpath expr="//span[@t-field='product.name']" position="replace">-->
+                <!--<span t-field="product.display_name"/>1111111111111111111111111111-->
+            <!--</xpath>-->
+        </template>
+
+    </data>
+</openerp>
