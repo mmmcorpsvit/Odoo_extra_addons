@@ -17,6 +17,26 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 # #############################################################################
+{
+    'name': 'E-comerce, hide coins from frontend (if not)',
 
-# from . import models
-from . import views
+    'summary': 'hide coins in catalog and product page (if possible)',
+
+    'description': 'E-comerce, hide coins from frontend (if not)',
+
+    'author': 'MMM_Corp',
+    'category': 'website_sale',
+    'version': '0.0.1',
+
+    'active': False,
+    'installable': True,
+    'auto_install': True,
+
+    # any module necessary for this one to work correctly
+    'depends': ['website_sale'],
+
+    # always loaded
+    'data': [
+        'views/nocoins_templates.xml'
+    ],
+}

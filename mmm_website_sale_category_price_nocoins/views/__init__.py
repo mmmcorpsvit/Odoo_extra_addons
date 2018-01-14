@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Copyright MMM_Corp
@@ -16,18 +16,9 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-##############################################################################
-{
-    'name': 'E-comerce, hide coins from frontend (if not)',
-    'version': '0.0.1',
-    'author': 'MMM_Corp',
-    'category': 'website_sale',
-    'description': 'E-comerce, hide coins from frontend (if not)',
-    'depends': ['website_sale'],
-    'data': [
-        'views/website_sale_templates.xml'
-    ],
-    'active': False,
-    'installable': True,
-    'auto_install': True,
-}
+# #############################################################################
+
+# -*- coding: utf-8 -*-
+
+from . import nocoins
+

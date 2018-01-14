@@ -1,0 +1,33 @@
+<openerp>
+    <data>
+
+        <template id="general" name="general">
+            <!--<span t-esc="product.website_price"/>-->
+            <!--product.website_price-->
+            <span t-esc="'{:,}'.format(product.website_price)
+                .replace(',', ' ')
+                .replace('.0', '')
+                .replace(',00', '')
+                .replace(r' ', u'\N{NO-BREAK SPACE}')
+                .replace(r'-', u'\u2011')"/>  <span> грн. </span>
+        </template>
+
+
+        <!--Product item in http://localhost:8069/shop-->
+         <template id="products_item" inherit_id="website_sale.products_item" name="MMM Products hide coins">
+            <xpath expr="//div[hasclass('product_price')]//span[1]" position="replace">
+                <span class="oe_currency_value" t-call="mmm_website_sale_category_price_nocoins.general"/>
+            </xpath>
+        </template>
+
+
+        <!--Product item in http://localhost:8069/shop/product/1208-->
+         <template id="product_price" inherit_id="website_sale.product_price" name="MMM Products hide coins">
+            <xpath expr="//div/h4/b[hasclass('oe_price')]" position="replace">
+                <b class="oe_price" t-call="mmm_website_sale_category_price_nocoins.general" />
+            </xpath>
+        </template>
+
+
+    </data>
+</openerp>
